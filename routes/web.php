@@ -15,3 +15,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::view('/homepage', 'homepage');
+Route::get('/editorpage', function(){
+    return view('editorpage');
+});

@@ -1,3 +1,11 @@
+<p>run this command :</p>
+<ul>
+	<li>composer require unisharp/laravel-ckeditor</li>
+	<li>composer require "laravelcollective/html":"^5.8.0"</li>
+	<li>php artisan vendor:publish --tag=ckeditor</li>
+</ul>
+
+
 <p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
 
 <p align="center">

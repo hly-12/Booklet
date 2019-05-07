@@ -21,3 +21,7 @@ Route::get('/profile', function () {
 Route::get('/viewdata', function () {
     return view('Layout.viewdata');
 });
+
+Route::get('/homepage', function () {
+    return view('booklet');
+});

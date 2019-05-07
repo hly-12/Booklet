@@ -2,9 +2,9 @@
     <ul class="list-inline">
       <li ><img src="{{asset('img/logo.png')}}" width="65" height="70"></li>
       <li style="margin-top:15px;margin-left:10px"><h1>Booklet</h1></li>
-      <li class="float-right" style="padding-right:10%;margin-top:2%;padding-left:10px;"><button type="button" class="btn btn-dark">Sign up</button></li>
-      <li class="float-right" style="margin-top:15px;padding-top:15px;"><h8 >Become a member<h8></li>
-      <li class="float-right" style="margin-top:15px;"><a href="#" class="search_icon"><i class="fas fa-search"></i></a></li>
+      <li class="float-right" style="padding-right:10%;margin-top:3%;padding-left:10px;"><button type="button" class="btn btn-dark">Sign up</button></li>
+      <li class="float-right" style="margin-top:15px;padding-top:2%;"><h8 >Become a member<h8></li>
+      <li class="float-right" style="margin-top:1%;"><a href="#" class="search_icon"><i class="fa fa-search" aria-hidden="true"></i></a></li>
     </ul>
 </div> 
 <nav class="navbar navbar-dark bg-dark">

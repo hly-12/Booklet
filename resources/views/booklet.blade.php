@@ -10,60 +10,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <style>
-
-    .fa {
-  padding: 10px;
-  font-size: 20px;
-  width: 40px;
-  text-align: center;   
-  text-decoration: none;
-  margin: 5px 2px;
-  border-radius: 50%;
-}
-.fa:hover {
-    opacity:0.9;
-}
-
-.fa-facebook {
-  background: #3B5998;
-  color: white;
-}
-.fa-twitter {
-  background: #55ACEE;
-  color: white;
-}
-.fa-youtube {
-  background:  #e60000;
-  color: white;
-}
-.fa-instagram {
-  background: linear-gradient(to top right, #ffff66 0%, #ff33cc 100%);
-  color: white;
-}
-    .fakeimg {
-        height: 200px;
-        background: #aaa;
-    }
-    ul {
-        list-style-type: circle;
-        margin: 0;
-        padding: 0;
-        overflow: hidden;
-        
-    }
-    
-    li {
-    float: left;
-    }
-    li a {
-    display: block;
-   color:grey;
-    text-align: center;
-    padding: 16px;
-    text-decoration: none;
-    }
-    </style>
 </head>
 <body >
 

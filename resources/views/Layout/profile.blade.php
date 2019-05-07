@@ -1,26 +1,42 @@
 @extends('layout.apps')
 
 @section('content')
-<div class="row">
-        <div class="col-6 col-md-4">
-            <img class="img-rounded" alt="Cinque Terre" width="300" height="370" style="margin-bottom:10%;" src="{{asset('img/profile.jpg')}}">
+<div class="bodyshape">
+<div style="margin-top:5%;">
+    <div>
+        <img style="margin-right:2%" src="{{asset('img/profile.jpg')}}" width="300" height="370" align="left" width="400px" height="400px""> 
+        <div>
+        <h3>PORY SOVANN</h3>
+        <p>CEO of booklet, Booklet Co.LTD</p>
+        <p style="text-align:justify;">My experience has been a short one, but it has been a life-changing one.
+
+                You see, I used to be more calculating in my feeling, often colsing out of emotions, this led to a healthy lack of envy, anger, jealousy,,, and a questionable lack of emotions I could not explain,
+                
+                like love.
+                
+                Keep in mind this was all in high school, and specifially in the first years.
+                
+                This person, I shall name U, was what I liked about people (when I happened to like people), they were smart, determinated, good and humane,
+                
+                They fascinated me, the way they felt emotions particularly did, I was very interested in them.
+                
+                I was also introverted, and preferred to observe.
+                
+                I missed my chanches to get closer, I preferred to not rush, as I wanted the best for them, something I didn't consider me to be.
+                
+                Slowly, over the course of a year, we grew closer as people who cared for each other,
+                
+                One day, with the gentle push of a friend of theirs, they invited me to the movies, I gladly accepted. It was a nice experience, a romantic movie I seemed to enjoy more than them and the start of a habit of talking to them.
+                
+                Summertime. We had had some walks around the city together, and I wanted to continue that, so I took them to a nice place. The pier in this city has alongside it a big stack of rocks, never knew why, anyway, we got there and chatted, after some climbing. We repeated this the next time we met in very much the same way, except the ending, for, you see, I accompanied them home before heading my way, and as we got there, standing before the door inside the apartment block, we said our goodbyes and I quickly kissed her cheek, in the ensuing confusion, I darted down the stairs.</p>
         </div>
-        <div class="col-12 col-md-8">
-            <h1 style="margin-top:8%;">PORY SOVANN</h1>
-            <p>Manager of Booklet, Pory.Co Ltd</p>
-
-            <div class="shadow-sm p-3 mb-5 bg-white rounded">
-                    <h5>MY BIOS</h5>
-                    <p>Pory Sovann is a content marketing professional at HubSpot, an inbound marketing and sales platform that helps companies attract visitors, convert leads, and close customers. Previously, Rodney worked as a marketing manager for a tech software startup. He graduated with honors from Columbia University with a dual degree in Business Administration and Creative Writing."
-                            Woof, that was dull. Are you still with me? I swear, not even adding a tidbit about his cats would liven that bio up.</p>
-
             </div>
+        <div style="margin-bottom:30px">
+                <h5>Publications</h5>
+                <hr align="left" width="100%"  style="background-color:black">
         </div>
-</div>
-<div style="margin-bottom:30px">
-        <h5>Publications</h5>
-        <hr align="left" width="100%"  style="background-color:black">
-</div>
+<div>
+
 <div class="row">
 <div class="col-xl col-lg-3 col-md-4 col-sm-6 pb-4">
     <a href="/viewdata">
@@ -97,5 +113,7 @@
  </div>
 </div>
 
-        
+</div>
+</div>  
+</div>   
 @endsection

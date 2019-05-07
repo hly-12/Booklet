@@ -95,7 +95,7 @@
             <div class="col-xl col-lg-3 col-md-4 col-sm-6 pb-4">
                 <div class="card card-block shadow">
                     <img class="card-img-top" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Batian_Nelion_and_pt_Slade_in_the_foreground_Mt_Kenya.JPG/220px-Batian_Nelion_and_pt_Slade_in_the_foreground_Mt_Kenya.JPG" alt="Card image cap">
-                    <div class="card-body" style="margin:30px">
+                    <div class="card-body" style="margin:10px">
                         <h5>Tittle</h5>
                         <p class="card-text">Some quick example text to build on the
                              card title and make up the bulk of the card's content.</p>
@@ -106,7 +106,7 @@
             <div class="col-xl col-lg-3 col-md-4 col-sm-6 pb-4">
                 <div class="card card-block shadow">
                     <img class="card-img-top" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Batian_Nelion_and_pt_Slade_in_the_foreground_Mt_Kenya.JPG/220px-Batian_Nelion_and_pt_Slade_in_the_foreground_Mt_Kenya.JPG" alt="Card image cap">
-                    <div class="card-body" style="margin:30px">
+                    <div class="card-body" style="margin:10px">
                         <h5>Tittle</h5>
                         <p class="card-text">Some quick example text to build on the
                              card title and make up the bulk of the card's content.</p>
@@ -117,7 +117,7 @@
             <div class="col-xl col-lg-3 col-md-4 col-sm-6 pb-4">
                 <div class="card card-block shadow">
                     <img class="card-img-top" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Batian_Nelion_and_pt_Slade_in_the_foreground_Mt_Kenya.JPG/220px-Batian_Nelion_and_pt_Slade_in_the_foreground_Mt_Kenya.JPG" alt="Card image cap">
-                    <div class="card-body" style="margin:30px">
+                    <div class="card-body" style="margin:10px">
                         <h5>Tittle</h5>
                         <p class="card-text">Some quick example text to build on the
                              card title and make up the bulk of the card's content.</p>

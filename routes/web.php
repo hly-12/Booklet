@@ -12,9 +12,12 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('Layout.homepage');
 });
-Route::view('/homepage', 'homepage');
-Route::get('/editorpage', function(){
-    return view('editorpage');
+Route::get('/profile', function () {
+    return view('Layout.profile');
+});
+
+Route::get('/viewdata', function () {
+    return view('Layout.viewdata');
 });

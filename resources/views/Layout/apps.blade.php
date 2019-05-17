@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Homepage</title>
+    <title>Booklet.com</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
@@ -12,6 +12,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="{{asset('css/newcss.css')}}">
+    <link rel="shortcut icon" type="image/x-icon" href="{{asset('img/logo.ico')}}">
+        <link rel="shortcut icon" type="image/png" href="{{asset('img/logo.png')}}">
 </head>
 @include('nav.header')
 <body >

@@ -15,12 +15,13 @@ class CreateBooksTable extends Migration
     {
         Schema::create('books', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('Tittle');
-            $table->date('DateOfPublish');
+            $table->string('Title');
+            $table->string('TitleCover');
             $table->string('Content');
+            $table->date('DateOfPublish');
             $table->integer('ViewCount');
             $table->string('TotalRate');
-            $table->string('TotalView');
+            $table->string('TotalReview');
             $table->integer('UserID');
             $table->timestamps();
         });

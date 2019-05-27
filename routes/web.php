@@ -25,3 +25,4 @@ Route::get('/viewdata', function () {
 Route::get('/homepage', function () {
     return view('booklet');
 });
+

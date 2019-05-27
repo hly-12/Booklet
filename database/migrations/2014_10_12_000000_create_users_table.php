@@ -20,7 +20,7 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->string('Carrer');
             $table->string('BIOs');
-            $table->string('Profile Pc');
+            $table->string('Profile_Pc');
             $table->rememberToken();
             $table->timestamps();
         });

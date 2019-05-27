@@ -25,3 +25,7 @@ Route::get('/viewdata', function () {
 Route::get('/homepage', function () {
     return view('booklet');
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

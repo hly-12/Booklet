@@ -22,10 +22,12 @@ Route::get('/viewdata', function () {
     return view('Layout.viewdata');
 });
 
-Route::get('/homepage', function () {
-    return view('booklet');
-});
+
 
 Auth::routes();
+Route::get('/home', 'HomeController@index');
+Route::get('/logout', function(){
+   Auth::logout();
+   return Redirect::to('/');
+});
 
-Route::get('/home', 'HomeController@index')->name('home');

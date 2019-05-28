@@ -33,3 +33,5 @@ Route::get('/logout', function(){
     Auth::logout();
     return Redirect::to('/');
  });
+ Route::get('/auth/redirect/{provider}', 'SocialController@redirect');
+ Route::get('/callback/{provider}', 'SocialController@callback');

@@ -69,9 +69,7 @@
                                 </a></div>
                             <div class="text-center">Don't have an account? <a href="{{ route('register') }}"><b>Signup</b></a></div>
                         </div>
-                        <div class="text-center">
-                                    <a href="{{ url('/auth/redirect/facebook') }}"><b>Signup with Facebook</b></a>
-                        </div>
+                        
                     </form>
                     </div>
                 </div>

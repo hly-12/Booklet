@@ -27,7 +27,7 @@ Route::get('/create', function () {
 });
 
 Auth::routes();
-
+Route::POST('/create', 'DatabaseController@addBook');
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/logout', function(){
     Auth::logout();

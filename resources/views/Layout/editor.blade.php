@@ -2,7 +2,7 @@
 
 @section('content')
     <h1>Add new post</h1>
-    {!! Form::open ()!!}
+    {!! Form::open (['action'=>'DatabaseController@addBook','method'=>'POST'])!!}
         <div class="form-group">
             {{Form::label('title','Title')}}
             {{Form::text('title','',['class'=>'form-control','placeholder'=>'Title'])}}

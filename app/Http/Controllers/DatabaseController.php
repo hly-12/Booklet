@@ -7,26 +7,34 @@ use App\Category;
 use App\User;
 use App\Books;
 use App\Is_Comment_On;
-
+use Auth;
 use Illuminate\Support\Facades\DB;
 
 class DatabaseController extends Controller
 {
     //
     public function test(Request $request){
-        $id_category = 1;
-        $itemCount = 3;
-        $sql = "SELECT books.`id`, books.`Title`, books.`TitleCover`, books.`Content`, books.`DateOfPublish`, books.`ViewCount`, books.`TotalRate`, books.`TotalReview`, books.`UserID`, books.`created_at`, books.`updated_at` FROM `books` 
-        INNER JOIN is_categories ON books.id = is_categories.BookID
-        WHERE is_categories.CategoryID = $id_category
-        ORDER BY books.created_at DESC
-        LIMIT $itemCount";
-        $books = DB::select($sql);
-        foreach($books as $book){
-            $user = User::where("id",$book->UserID)->get();
-            $book->user = $user;
+        return $request;
+    }
+
+    public function addBook(Request $request){
+
+        $book = new Books();
+        if (Auth::check())
+        {
+            $book->Title = $request->input('title');
+            $book->Content = $request->input('body');
+            $book->TitleCover = '';
+            $book->ViewCount = 0;
+            $book->TotalRate = '';
+            $book->TotalReview= '';
+            $book->UserID = Auth::user()->id;
+            $book->DateOfPublish =  date("Y-m-d");
+            $book->save();
         }
-        return $books;
+        
+
+        return redirect('/');
     }
 
     public function getCommentInBook(Request $request){

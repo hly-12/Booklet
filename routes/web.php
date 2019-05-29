@@ -11,9 +11,12 @@
 |
 */
 
-Route::get('/', function () {
-    return view('Layout.homepage');
-});
+// Route::get('/', function () {
+//     return view('Layout.homepage');
+// });
+
+Route::get('/','DatabaseController@getAllCategoryTitle');
+
 Route::get('/profile', function () {
     return view('Layout.profile');
 });

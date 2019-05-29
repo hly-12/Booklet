@@ -109,6 +109,8 @@ class DatabaseController extends Controller
 
     public function getAllCategoryTitle(){
         $categories = Category::all();
-        return response()->json($categories);
+
+        return view('Layout.homepage',['categories' => $categories]);
+        // return response()->json($categories);
     }
 }

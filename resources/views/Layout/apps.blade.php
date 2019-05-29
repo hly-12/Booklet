@@ -22,13 +22,19 @@
     <link rel="stylesheet" type="text/css" href="{{asset('vendors/css/prism.min.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('vendors/css/chartist.min.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('css/app.css')}}">
+    
 </head>
 @include('nav.header')
 <body >
     <div class="container" >
         @yield('content')
     </div>
+    <script src="/vendor/unisharp/laravel-ckeditor/ckeditor.js"></script>
+    <script>
+        CKEDITOR.replace( 'article-ckeditor' );
+    </script>
 </body>
+
 @include('nav.footer')
 
 

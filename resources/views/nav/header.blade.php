@@ -45,11 +45,5 @@
     @else
       <a class="nav-item nav-link text-ligh" style="padding-right:20%;color:white" href="#">{{ $category->Genre }}</a>
     @endif
-        <!-- <a class="nav-item nav-link text-ligh" style="padding-left:20%;color:white" href="/">Fictions</a>
-        <a class="nav-item nav-link text-ligh" style="color:white"  href="/profile">Technology</a>
-        <a class="nav-item nav-link text-ligh" style="color:white" href="/viewdata">Action</a>
-        <a class="nav-item nav-link text-ligh" style="color:white" href="#">Sport</a>
-        <a class="nav-item nav-link text-ligh" style="color:white" href="#">Blog</a>
-        <a class="nav-item nav-link text-ligh" style="padding-right:20%;color:white" href="#">Mores</a> -->
   @endforeach
 </nav>

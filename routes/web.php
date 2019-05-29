@@ -22,8 +22,8 @@ Route::get('/viewdata', function () {
     return view('Layout.viewdata');
 });
 
-Route::get('/homepage', function () {
-    return view('booklet');
+Route::get('/create', function () {
+    return view('Layout.editor');
 });
 
 Auth::routes();

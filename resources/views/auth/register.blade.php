@@ -56,6 +56,42 @@
                                 <input id="password-confirm" type="password" class="form-control form-control-lg" placeholder="Confirm Password" name="password_confirmation" required>
                             </div>
                         </div>
+                        {{-- add new data --}}
+                        <div class="form-group">
+                                <div class="col-md-12">
+                                    <input id="Carrer" type="text" class="form-control form-control-lg{{ $errors->has('Carrer') ? ' is-invalid' : '' }}" placeholder="Carrer" name="Carrer" value="{{ old('Carrer') }}" required autofocus>
+    
+                                    @if ($errors->has('Carrer'))
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $errors->first('Carrer') }}</strong>
+                                        </span>
+                                    @endif
+                                </div>
+                            </div>
+                            <div class="form-group">
+
+                                    <div class="col-md-12">
+                                        <input id="BIOs" type="text" class="form-control form-control-lg{{ $errors->has('BIOs') ? ' is-invalid' : '' }}" placeholder="BIOs" name="BIOs" value="{{ old('BIOs') }}" required autofocus>
+        
+                                        @if ($errors->has('BIOs'))
+                                            <span class="invalid-feedback" role="alert">
+                                                <strong>{{ $errors->first('BIOs') }}</strong>
+                                            </span>
+                                        @endif
+                                    </div>
+                                </div>
+                                <div class="form-group">
+
+                                        <div class="col-md-12">
+                                            <input id="Profile_Pc" type="text" class="form-control form-control-lg{{ $errors->has('Profile_Pc') ? ' is-invalid' : '' }}" placeholder="Profile_Pc" name="Profile_Pc" value="{{ old('Profile_Pc') }}" required autofocus>
+            
+                                            @if ($errors->has('Profile_Pc'))
+                                                <span class="invalid-feedback" role="alert">
+                                                    <strong>{{ $errors->first('Profile_Pc') }}</strong>
+                                                </span>
+                                            @endif
+                                        </div>
+                                    </div>
 
                         <div class="form-group">
                             <div class="text-center col-md-12">

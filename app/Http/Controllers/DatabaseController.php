@@ -7,6 +7,7 @@ use App\Category;
 use App\User;
 use App\Books;
 use App\Is_Comment_On;
+use App\IsCategory;
 use Auth;
 use Illuminate\Support\Facades\DB;
 
@@ -42,6 +43,12 @@ class DatabaseController extends Controller
             $book->UserID = Auth::user()->id;
             $book->DateOfPublish =  date("Y-m-d");
             $book->save();
+
+            $is_category = new IsCategory();
+            $is_category->CategoryID = 1;
+            $is_category->BookID = Books::max('id');
+
+            $is_category->save();
         }
         
 
@@ -126,6 +133,11 @@ class DatabaseController extends Controller
         
 
         return view('Layout.profile',['categories' => $categories]);
+    }
+
+    public function getEditorPage(){
+        $categories = Category::all();
+        return view('Layout.editor',['categories' => $categories]);
     }
 
     public function getHomepage(Request $request){

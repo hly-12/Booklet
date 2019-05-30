@@ -8,7 +8,7 @@
             <img class="card-img-top" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Batian_Nelion_and_pt_Slade_in_the_foreground_Mt_Kenya.JPG/220px-Batian_Nelion_and_pt_Slade_in_the_foreground_Mt_Kenya.JPG" alt="Card image cap">
             <div class="card-body" style="margin:10px">
                 <h5>{{$book->Title}}</h5>
-                <p class="card-text">{{$book->Content}}</p>
+                {!!$book->Content!!}
                 <p style="color:#808e95">yesterday, 23:22</p>
             </div>
         </div>
@@ -47,7 +47,7 @@
                         <div class="media-body">
                             <p style="font-size:90%;color:#808e95">{{$book->category->Genre}}</p>
                             <h5 class="mt-0">{{$book->Title}}</h5>
-                            <p>{{$book->Content}}</p>
+                            {!!$book->Content!!}
                         </div>
                     </div>
                     @else
@@ -56,7 +56,7 @@
                         <div class="media-body">
                             <p style="font-size:90%;color:#808e95">{{$book->category->Genre}}</p>
                             <h5 class="mt-0">{{$book->Title}}</h5>
-                            <p>{{$book->Content}}</p>
+                            {!!$book->Content!!}
                         </div>
                     </div>
                     @endif
@@ -87,7 +87,7 @@
                         <div class="media-body">
                             <p style="font-size:90%;color:#808e95">{{$book->category->Genre}}</p>
                             <h5 class="mt-0">{{$book->Title}}</h5>
-                            <p>{{$book->Content}}</p>
+                            {!!$book->Content!!}
                         </div>
                     </div>
                     @else
@@ -96,7 +96,7 @@
                         <div class="media-body">
                             <p style="font-size:90%;color:#808e95">{{$book->category->Genre}}</p>
                             <h5 class="mt-0">{{$book->Title}}</h5>
-                            <p>{{$book->Content}}</p>
+                            {!!$book->Content!!}
                         </div>
                     </div>
                     @endif

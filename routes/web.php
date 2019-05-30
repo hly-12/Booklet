@@ -25,9 +25,7 @@ Route::get('/viewdata', function () {
     return view('Layout.viewdata');
 });
 
-Route::get('/create', function () {
-    return view('Layout.editor');
-});
+Route::get('/create', 'DatabaseController@getEditorPage');
 
 Auth::routes();
 Route::POST('/create', 'DatabaseController@addBook');

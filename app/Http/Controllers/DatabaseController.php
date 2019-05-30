@@ -14,7 +14,18 @@ class DatabaseController extends Controller
 {
     //
     public function test(Request $request){
-        return $request;
+        $categories = Category::all();
+
+        $id_category = 1;
+        $itemCount = 3;
+
+        $most_view_books = $this->getMostViewBookInCategory($id_category,$itemCount);
+
+        $latest_books = $this->getLastestBookByCategoryId($id_category,$itemCount);
+
+        $popular_books = $this->getMostPopularBookInCategory($id_category,$itemCount);
+
+        return ['categories' => $categories,'latest_books'=>$latest_books,'most_view_books'=>$most_view_books,'popular_books'=>$popular_books];
     }
 
     public function addBook(Request $request){
@@ -57,60 +68,80 @@ class DatabaseController extends Controller
         return response()->json($user);
     }
 
-    public function getMostPopularBookInCategory(Request $request){
-        $id_category = $request->id_category;
-        $itemCount = $request->itemCount;
-        $sql = "SELECT books.`id`, books.`Title`, books.`TitleCover`, books.`Content`, books.`DateOfPublish`, books.`ViewCount`, books.`TotalRate`, books.`TotalReview`, books.`UserID`, books.`created_at`, books.`updated_at` FROM `books` 
+    public function getMostPopularBookInCategory($id_category , $itemCount){
+        
+        
+        $sql = "SELECT * FROM `books` 
         INNER JOIN is_categories ON books.id = is_categories.BookID
         WHERE is_categories.CategoryID = $id_category
         ORDER BY books.`TotalRate` DESC
         LIMIT $itemCount";
-        $books = DB::select($sql);
-        foreach($books as $book){
-            $user = User::where("id",$book->UserId)->get();
+
+        $popular_books = DB::select($sql);
+        foreach($popular_books as $book){
+            $user = User::where("id",$book->UserID)->get();
+            $category = Category::where("id",$book->CategoryID)->get();
             $book->user = $user;
-            $book_date[] = $book;
+            $book->category = $category[0];
         }
-        return response()->json($books);
+        return $popular_books;
     }
 
 
-    public function getMostViewBookInCategory(Request $request){
-        $id_category = $request->id_category;
-        $itemCount = $request->itemCount;
-        $sql = "SELECT books.`id`, books.`Title`, books.`TitleCover`, books.`Content`, books.`DateOfPublish`, books.`ViewCount`, books.`TotalRate`, books.`TotalReview`, books.`UserID`, books.`created_at`, books.`updated_at` FROM `books` 
+    public function getMostViewBookInCategory($id_category , $itemCount){
+
+        $sql = "SELECT * FROM `books` 
         INNER JOIN is_categories ON books.id = is_categories.BookID
         WHERE is_categories.CategoryID = $id_category
         ORDER BY books.`ViewCount` DESC
         LIMIT $itemCount";
-        $books = DB::select($sql);
-        foreach($books as $book){
+        $most_view_books = DB::select($sql);
+        foreach($most_view_books as $book){
             $user = User::where("id",$book->UserID)->get();
+            $category = Category::where("id",$book->CategoryID)->get();
             $book->user = $user;
+            $book->category = $category[0];
         }
-        return response()->json($books);
+        return $most_view_books;
     }
 
-    public function getLastestBookByCategoryId(Request $request){
-        $id_category = $request->id_category;
-        $itemCount = $request->itemCount;
+    public function getLastestBookByCategoryId($id_category , $itemCount){
+
         $sql = "SELECT books.`id`, books.`Title`, books.`TitleCover`, books.`Content`, books.`DateOfPublish`, books.`ViewCount`, books.`TotalRate`, books.`TotalReview`, books.`UserID`, books.`created_at`, books.`updated_at` FROM `books` 
         INNER JOIN is_categories ON books.id = is_categories.BookID
         WHERE is_categories.CategoryID = $id_category
         ORDER BY books.created_at DESC
         LIMIT $itemCount";
-        $books = DB::select($sql);
-        foreach($books as $book){
+        $latest_books = DB::select($sql);
+        foreach($latest_books as $book){
             $user = User::where("id",$book->UserID)->get();
             $book->user = $user;
         }
-        return response()->json($books);
+
+        return $latest_books;
     }
 
-    public function getAllCategoryTitle(){
+    public function getProfilePage(Request $request){
+        $categories = Category::all();
+        
+
+        return view('Layout.profile',['categories' => $categories]);
+    }
+
+    public function getHomepage(Request $request){
         $categories = Category::all();
 
-        return view('Layout.homepage',['categories' => $categories]);
-        // return response()->json($categories);
+        $id_category = 1;
+        $itemCount = 3;
+
+        $most_view_books = $this->getMostViewBookInCategory($id_category,$itemCount);
+
+        $latest_books = $this->getLastestBookByCategoryId($id_category,$itemCount);
+
+        $popular_books = $this->getMostPopularBookInCategory($id_category,$itemCount);
+
+        return view('Layout.homepage',['categories' => $categories,'latest_books'=>$latest_books,'most_view_books'=>$most_view_books,'popular_books'=>$popular_books]);
+        // return response()->json($books);
+        
     }
 }

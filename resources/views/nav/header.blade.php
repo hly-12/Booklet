@@ -32,3 +32,15 @@
         <li class="float-right" style="margin-top:1%;"><a href="#" class="search_icon"><i class="fa fa-search" aria-hidden="true"></i></a></li>
     </ul>
 </div> 
+<nav class="navbar navbar-dark bg-dark">
+
+    @foreach($categories as $category)
+      @if($loop->first)
+        <a class="nav-item nav-link text-ligh" style="padding-left:20%;color:white" href="/">{{ $category->Genre }}</a>
+      @elseif($loop->last)
+        <a class="nav-item nav-link text-ligh" style="padding-right:20%;color:white"  href="/profile">{{ $category->Genre }}</a>
+      @else 
+        <a class="nav-item nav-link text-ligh" style="color:white" href="#">{{ $category->Genre }}</a>
+      @endif
+    @endforeach
+  </nav>

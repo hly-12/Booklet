@@ -28,6 +28,8 @@ Route::get('/viewdata', function () {
 Route::get('/create', function () {
     return view('Layout.editor');
 });
+Route::get('profiles','UserController@profile');
+Route::get('profiles','UserController@update_avatar');
 
 Auth::routes();
 Route::POST('/create', 'DatabaseController@addBook');

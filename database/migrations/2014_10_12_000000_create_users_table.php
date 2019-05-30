@@ -20,7 +20,7 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->string('Carrer')->nullable();
             $table->string('BIOs')->nullable();
-            $table->string('Profile_Pc')->nullable();
+            $table->string('avatar')->default('default.jpg');
             $table->rememberToken();
             $table->timestamps();
         });

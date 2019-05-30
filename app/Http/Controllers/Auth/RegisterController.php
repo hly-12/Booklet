@@ -54,7 +54,6 @@ class RegisterController extends Controller
             'password' => ['required', 'string', 'min:8', 'confirmed'],
             'Carrer' => ['required', 'string', 'max:255'],
             'BIOs' => ['required', 'string', 'max:255'],
-            'Profile_Pc' => ['required', 'string', 'max:255'],
         ]);
     }
 
@@ -72,7 +71,6 @@ class RegisterController extends Controller
             'password' => Hash::make($data['password']),
             'Carrer' => $data['Carrer'],
             'BIOs' => $data['BIOs'],
-            'Profile_Pc' => $data['Profile_Pc'],
         ]);
     }
 }

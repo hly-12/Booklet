@@ -80,18 +80,13 @@
                                         @endif
                                     </div>
                                 </div>
-                                <div class="form-group">
-
-                                        <div class="col-md-12">
-                                            <input id="Profile_Pc" type="text" class="form-control form-control-lg{{ $errors->has('Profile_Pc') ? ' is-invalid' : '' }}" placeholder="Profile_Pc" name="Profile_Pc" value="{{ old('Profile_Pc') }}" required autofocus>
-            
-                                            @if ($errors->has('Profile_Pc'))
-                                                <span class="invalid-feedback" role="alert">
-                                                    <strong>{{ $errors->first('Profile_Pc') }}</strong>
-                                                </span>
-                                            @endif
-                                        </div>
+                                <div class="form-group row">
+                                    <label for="avatar" class="col-md-3 col-form-label text-md-right">{{ __('Avatar') }}</label>
+                                
+                                    <div class="col-md-8">
+                                        <input id="avatar" type="file" class="form-control form-control-lg" name="avatar">
                                     </div>
+                                </div>
 
                         <div class="form-group">
                             <div class="text-center col-md-12">

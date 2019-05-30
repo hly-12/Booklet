@@ -41,9 +41,9 @@
     @if($loop->first)
       <a class="nav-item nav-link text-ligh" style="padding-left:20%;color:white" href="/">{{ $category->Genre }}</a>
     @elseif($loop->last)
-      <a class="nav-item nav-link text-ligh" style="color:white"  href="/profile">{{ $category->Genre }}</a>
-    @else
-      <a class="nav-item nav-link text-ligh" style="padding-right:20%;color:white" href="#">{{ $category->Genre }}</a>
+      <a class="nav-item nav-link text-ligh" style="padding-right:20%;color:white"  href="/profile">{{ $category->Genre }}</a>
+    @else 
+      <a class="nav-item nav-link text-ligh" style="color:white" href="#">{{ $category->Genre }}</a>
     @endif
   @endforeach
 </nav>

@@ -15,11 +15,11 @@
 //     return view('Layout.homepage');
 // });
 
-Route::get('/','DatabaseController@getAllCategoryTitle');
+Route::get('/','DatabaseController@getHomepage');
+Route::post('/','DatabaseController@getHomepage');
+Route::get('/test','DatabaseController@test');
 
-Route::get('/profile', function () {
-    return view('Layout.profile');
-});
+Route::get('/profile','DatabaseController@getProfilePage');
 
 Route::get('/viewdata', function () {
     return view('Layout.viewdata');

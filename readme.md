@@ -3,6 +3,7 @@
 	<li>composer require unisharp/laravel-ckeditor</li>
 	<li>composer require "laravelcollective/html":"^5.8.0"</li>
 	<li>php artisan vendor:publish --tag=ckeditor</li>
+    <li>composer require intervention/image</li>
 </ul>
 
 

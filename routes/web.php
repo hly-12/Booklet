@@ -19,17 +19,20 @@ Route::get('/','DatabaseController@getHomepage');
 Route::post('/','DatabaseController@getHomepage');
 Route::get('/test','DatabaseController@test');
 
-Route::get('/profile','DatabaseController@getProfilePage');
+Route::get('/profile/{id_profile}','DatabaseController@getProfilePage');
 
-Route::get('/viewdata', function () {
-    return view('Layout.viewdata');
-});
+Route::get('/viewdata/{id_book}', 'DatabaseController@getBookPage');
 
 Route::get('/create', 'DatabaseController@getEditorPage');
 
+Route::get('profiles','UserController@profile');
+Route::get('profiles','UserController@update_avatar');
+Route::POST('profiles','UserController@update_avatar');
+
 Auth::routes();
 Route::POST('/create', 'DatabaseController@addBook');
-Route::get('/home', 'HomeController@index')->name('home');
+// Route::get('/create', 'DatabaseController@addBook');
+// Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/logout', function(){
     Auth::logout();
     return Redirect::to('/');

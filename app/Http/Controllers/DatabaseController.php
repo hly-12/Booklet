@@ -15,18 +15,11 @@ class DatabaseController extends Controller
 {
     //
     public function test(Request $request){
-        $categories = Category::all();
-
-        $id_category = 1;
-        $itemCount = 3;
-
-        $most_view_books = $this->getMostViewBookInCategory($id_category,$itemCount);
-
-        $latest_books = $this->getLastestBookByCategoryId($id_category,$itemCount);
-
-        $popular_books = $this->getMostPopularBookInCategory($id_category,$itemCount);
-
-        return ['categories' => $categories,'latest_books'=>$latest_books,'most_view_books'=>$most_view_books,'popular_books'=>$popular_books];
+        
+        $id_book = 1;
+        
+        $write_books = Books::where('id',$id_book)->first();
+        return $write_books;
     }
 
     public function addBook(Request $request){
@@ -45,14 +38,16 @@ class DatabaseController extends Controller
             $book->save();
 
             $is_category = new IsCategory();
-            $is_category->CategoryID = 1;
+            $categories = Category::all();
+            $is_category->CategoryID =$categories[$request->category]->id;
             $is_category->BookID = Books::max('id');
 
             $is_category->save();
+            $route = "/viewdata/$is_category->BookID";
         }
         
 
-        return redirect('/');
+        return redirect($route);
     }
 
     public function getCommentInBook(Request $request){
@@ -68,11 +63,10 @@ class DatabaseController extends Controller
         return response()->json($comments);
     }
 
-    public function getProfileById(Request $request){
+    public function getProfileById($id_user){
 
-        $id_user = $request->id_user;
         $user = User::where('id',$id_user)->get();
-        return response()->json($user);
+        return $user;
     }
 
     public function getMostPopularBookInCategory($id_category , $itemCount){
@@ -128,16 +122,38 @@ class DatabaseController extends Controller
         return $latest_books;
     }
 
+
+    public function getBookPage(Request $request){
+        $categories = Category::all();
+        $id_book = $request->id_book;
+        
+        $write_books = Books::where('id',$id_book)->first();
+        $write_books->user = User::where('id',$write_books->UserID)->first();
+        return view('Layout.viewdata',['categories' => $categories,'book'=>$write_books]);
+    }
+
     public function getProfilePage(Request $request){
         $categories = Category::all();
         
 
-        return view('Layout.profile',['categories' => $categories]);
+        $profile = $this->getProfileById($request->id_profile);
+
+
+        $sql = "SELECT * FROM `books` WHERE UserID = $request->id_profile
+        ORDER BY books.`created_at` DESC
+        ";
+        $write_books = DB::select($sql);
+
+        return view('Layout.profile',['categories' => $categories,'profile' => $profile[0],'write_books'=>$write_books]);
     }
 
     public function getEditorPage(){
         $categories = Category::all();
-        return view('Layout.editor',['categories' => $categories]);
+
+        foreach($categories as $category){
+            $list[] = $category->Genre;
+        }
+        return view('Layout.editor',['categories' => $categories,'list'=>$list]);
     }
 
     public function getHomepage(Request $request){

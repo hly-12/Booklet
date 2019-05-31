@@ -3,16 +3,18 @@
 @section('content')
 <div class="row" style="margin-top:3%;">
     @foreach($latest_books as $book)
-    <div class="col-xl col-lg-3 col-md-4 col-sm-6 pb-4">
-        <div class="card card-block shadow">
-            <img class="card-img-top" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Batian_Nelion_and_pt_Slade_in_the_foreground_Mt_Kenya.JPG/220px-Batian_Nelion_and_pt_Slade_in_the_foreground_Mt_Kenya.JPG" alt="Card image cap">
-            <div class="card-body" style="margin:10px">
-                <h5>{{$book->Title}}</h5>
-                {!!$book->Content!!}
-                <p style="color:#808e95">yesterday, 23:22</p>
+    <a href="/viewdata/{{$book->id}}" style = "color: inherit;text-decoration: none;">
+        <div class="col-xl col-lg-3 col-md-4 col-sm-6 pb-4">
+            <div class="card card-block shadow">
+                <img class="card-img-top" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Batian_Nelion_and_pt_Slade_in_the_foreground_Mt_Kenya.JPG/220px-Batian_Nelion_and_pt_Slade_in_the_foreground_Mt_Kenya.JPG" alt="Card image cap">
+                <div class="card-body" style="margin:10px">
+                    <h5>{{$book->Title}}</h5>
+                    {!!$book->Content!!}
+                    <p style="color:#808e95">yesterday, 23:22</p>
+                </div>
             </div>
         </div>
-    </div>
+    </a>
     @endforeach
      
 </div>
@@ -42,6 +44,8 @@
                 </div>
                 @foreach($most_view_books as $book)
                     @if($loop->first)
+                    <a href="/viewdata/{{$book->id}}" style = "color: inherit;text-decoration: none;">
+
                     <div class="media pt-4">
                         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Batian_Nelion_and_pt_Slade_in_the_foreground_Mt_Kenya.JPG/220px-Batian_Nelion_and_pt_Slade_in_the_foreground_Mt_Kenya.JPG" class="rounded align-self-start mr-3" alt="...">
                         <div class="media-body">
@@ -50,7 +54,10 @@
                             {!!$book->Content!!}
                         </div>
                     </div>
+                    </a>
                     @else
+                    <a href="/viewdata/{{$book->id}}" style = "color: inherit;text-decoration: none;">
+
                     <div class="media pt-2">
                         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Batian_Nelion_and_pt_Slade_in_the_foreground_Mt_Kenya.JPG/220px-Batian_Nelion_and_pt_Slade_in_the_foreground_Mt_Kenya.JPG" class="rounded align-self-start mr-3" alt="...">
                         <div class="media-body">
@@ -59,6 +66,7 @@
                             {!!$book->Content!!}
                         </div>
                     </div>
+                    </a>
                     @endif
 
                 @endforeach
@@ -80,7 +88,9 @@
                     </div>
                     
                 </div>
-                @foreach($popular_books as $book)
+            @foreach($popular_books as $book)
+                <a href="/viewdata/{{$book->id}}" style = "color: inherit;text-decoration: none;">
+
                     @if($loop->first)
                     <div class="media pt-4">
                         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Batian_Nelion_and_pt_Slade_in_the_foreground_Mt_Kenya.JPG/220px-Batian_Nelion_and_pt_Slade_in_the_foreground_Mt_Kenya.JPG" class="rounded align-self-start mr-3" alt="...">
@@ -100,7 +110,7 @@
                         </div>
                     </div>
                     @endif
-
+                </a>
                 @endforeach
                
             </div>

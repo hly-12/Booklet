@@ -8,6 +8,10 @@
             {{Form::text('title','',['class'=>'form-control','placeholder'=>'Title'])}}
         </div>
         <div class="form-group">
+            {{Form::label('category','Category')}}
+            {!! Form::select('category', $list,null,['class'=>'form-control']) !!}
+        </div>
+        <div class="form-group">
             {{Form::label('body','Body')}}
             {{Form::textarea('body','',['id'=>'article-ckeditor','class'=>'form-control','placeholder'=>'Body Text'])}}
 

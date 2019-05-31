@@ -25,8 +25,9 @@
     <link rel="stylesheet" type="text/css" href="{{asset('css/app.css')}}">
     
 </head>
-@include('nav.header')
+
 <body >
+    @include('nav.header')
     <div class="container" >
         @yield('content')
     </div>

@@ -1,4 +1,4 @@
-<div class="container-fluid" style="margin-bottom:0px;margin-top:10px;padding-left:20%">    
+<div class="container-fluid dropdown" style="margin-bottom:0px;margin-top:10px;padding-left:20%">    
     <ul class="list-inline">
       <li ><a href="/"><img src="{{asset('img/logo.png')}}" width="65" height="70"></a></li>
       <li style="margin-top:15px;margin-left:10px"><h1>Booklet</h1></li>
@@ -10,30 +10,30 @@
           <!-- {{-- <li class="float-right" style="padding-right:10%;margin-top:35px;padding-left:10px;"><a href="{{route('logout')}}" class="btn btn-success" role="button">Log out</a><form id="frm-logout" action="{{ route('logout') }}" method="POST" style="display: none;">{{ csrf_field() }}</form></li> --}}
           {{-- <li class="float-right" style="margin-top:15px;padding-top:1%;"><p style="font-weight: bold ;"><a href="/profile">{{ Auth::user()->name }}</p></a></li> --}}
            -->
-          <li class="dropdown float-right" style="margin-bottom:30%;">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" style="font-weight: boldposition:relative; padding-left:50px;">
-                  <img src="/uploads/avatars/{{ Auth::user()->avatar }}" style="width:32px; height:32px; position:absolute; top:10px; left:10px; border-radius:50%">
-                  {{ Auth::user()->name }}
-              </a>
-             
+          <li class="float-right" >
             <ul class="dropdown-menu"  role="menu">
                   <li>
-                    <a href="/profile/{{Auth::user()->id}}"><i class="fa fa-btn fa-user"></i>Profile</a>
-                    <a href="{{ url('/create') }}"><i class="fa fa-btn fa-user"></i>New Story</a>
-                  
-                      <a href="{{route('logout')}}"
+                    <a class="dropdown-item" href="/profile/{{Auth::user()->id}}"><i class="fa fa-btn fa-user"></i>Profile</a>
+                    <a class="dropdown-item" href="{{ url('/create') }}"><i class="fa fa-btn fa-book"></i>New Story</a>
+                    <a class="dropdown-item" href="{{route('logout')}}"
                         onclick="event.preventDefault();
-                              document.getElementById('frm-logout').submit();">
+                              document.getElementById('frm-logout').submit();"><i class="fa fa-btn fa-power-off"></i>
                         Logout
                         </a>
-                    <form id="frm-logout" action="{{ route('logout') }}" method="POST" style="display: none;">
+                    <form class="dropdown-item" action="{{ route('logout') }}" method="POST" style="display: none;">
                         {{ csrf_field() }}
                     </form>
                   </li>
           
-            </ul>
+            </ul>        
         @endif
-        <li class="float-right" style="margin-top:1%;"><a href="#" class="search_icon"><i class="fa fa-search" aria-hidden="true"></i></a></li>
+        <a href="#" class="dropdown-toggle float-right" data-toggle="dropdown" role="button" aria-expanded="false" style="font-weight: boldposition:relative; ">
+            {{ Auth::user()->name }}
+        </a>
+        <a href="#" class="float-right" data-toggle="dropdown" role="button" aria-expanded="false" style="font-weight: boldposition:relative;">
+          <img class="float-right"   src="/uploads/avatars/{{ Auth::user()->avatar }}" style="width:32px; height:32px; top:10px;  border-radius:50%;">
+      </a>
+        
     </ul>
 </div> 
 <nav class="navbar navbar-dark bg-dark">

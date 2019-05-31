@@ -3,17 +3,19 @@
 @section('content')
 <div class="row" style="margin-top:3%;">
     @foreach($latest_books as $book)
-    <a href="/viewdata/{{$book->id}}" style = "color: inherit;text-decoration: none;">
-        <div class="col-xl col-lg-3 col-md-4 col-sm-6 pb-4">
-            <div class="card card-block shadow">
+    <a href="/viewdata/{{$book->id}}" style = "color: inherit;text-decoration: none;min-height: 500px;" class="col-4">
+        
+            <div class="card card-block shadow" style="height: 100%">
                 <img class="card-img-top" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Batian_Nelion_and_pt_Slade_in_the_foreground_Mt_Kenya.JPG/220px-Batian_Nelion_and_pt_Slade_in_the_foreground_Mt_Kenya.JPG" alt="Card image cap">
                 <div class="card-body" style="margin:10px">
                     <h5>{{$book->Title}}</h5>
+                    <div style="max-height:45px;overflow-y:hidden">
                     {!!$book->Content!!}
+                    </div>
                     <p style="color:#808e95">yesterday, 23:22</p>
                 </div>
             </div>
-        </div>
+        
     </a>
     @endforeach
      
@@ -58,7 +60,7 @@
                     @else
                     <a href="/viewdata/{{$book->id}}" style = "color: inherit;text-decoration: none;">
 
-                    <div class="media pt-2">
+                    <div class="media pt-4">
                         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Batian_Nelion_and_pt_Slade_in_the_foreground_Mt_Kenya.JPG/220px-Batian_Nelion_and_pt_Slade_in_the_foreground_Mt_Kenya.JPG" class="rounded align-self-start mr-3" alt="...">
                         <div class="media-body">
                             <p style="font-size:90%;color:#808e95">{{$book->category->Genre}}</p>
@@ -144,19 +146,6 @@
                         
                 </div>
             </div>
-        </div>
-        <div class="row">
-            <ul>
-                <li><a href="#">Help</a></li>
-                <li><a href="#">Status</a></li>
-                <li><a href="#">Writers</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">Careers</a></li>
-                <li><a href="#">Privacy</a></li>
-                <li><a href="#">Terms</a></li>
-                <li><a href="#">About</a></li>
-                
-            </ul>
         </div>
     </div>
 </div>

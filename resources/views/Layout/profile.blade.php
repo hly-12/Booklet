@@ -4,7 +4,7 @@
 <div class="bodyshape">
 <div class="row" style="margin-top:5%;">
     <div class="col-auto">
-    <img style="margin-right:2%;" src="/uploads/avatars/{{ Auth::user()->avatar }}" max-width="400" max-height="400" align="left"> 
+    <img style="margin-right:2%;" src="/uploads/avatars/{{ Auth::user()->avatar }}" width="150" height="150" align="left"> 
     </div >
     <div class="col">
     <h3>{{$profile->name}}</h3>
@@ -22,7 +22,7 @@
 <a href="/viewdata/{{$book->id}}" style = "color: inherit;text-decoration: none;margin:1%;width:355px;">
         <div class="card card-block shadow" style="height: 100%;margin-bottom:3%;">
             <img class="card-img-top" src="{{asset('img/bali.jpg')}}" width="380" height="160" alt="Card image cap">
-            <div class="card-body">
+            <div class="card-body"> 
                 <h5>{{$book->Title}}</h5>
                 <div style="max-height:45px;overflow-y:hidden">
                 {!!$book->Content!!}

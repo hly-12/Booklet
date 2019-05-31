@@ -48,19 +48,19 @@
                     @if($loop->first)
                     <a href="/viewdata/{{$book->id}}" style = "color: inherit;text-decoration: none;">
 
-                    <div class="media pt-4">
+                    <div class="media pt-4" style="max-width: 800px;overflow:hidden;">
                         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Batian_Nelion_and_pt_Slade_in_the_foreground_Mt_Kenya.JPG/220px-Batian_Nelion_and_pt_Slade_in_the_foreground_Mt_Kenya.JPG" class="rounded align-self-start mr-3" alt="...">
                         <div class="media-body">
                             <p style="font-size:90%;color:#808e95">{{$book->category->Genre}}</p>
                             <h5 class="mt-0">{{$book->Title}}</h5>
-                            {!!$book->Content!!}
+                            <div >{!!$book->Content!!}</div>
                         </div>
                     </div>
                     </a>
                     @else
                     <a href="/viewdata/{{$book->id}}" style = "color: inherit;text-decoration: none;">
 
-                    <div class="media pt-4">
+                    <div class="media pt-4" style="max-width: 800px;overflow:hidden;">
                         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Batian_Nelion_and_pt_Slade_in_the_foreground_Mt_Kenya.JPG/220px-Batian_Nelion_and_pt_Slade_in_the_foreground_Mt_Kenya.JPG" class="rounded align-self-start mr-3" alt="...">
                         <div class="media-body">
                             <p style="font-size:90%;color:#808e95">{{$book->category->Genre}}</p>
@@ -94,7 +94,7 @@
                 <a href="/viewdata/{{$book->id}}" style = "color: inherit;text-decoration: none;">
 
                     @if($loop->first)
-                    <div class="media pt-4">
+                    <div class="media pt-4" style="max-width: 800px;overflow:hidden;">
                         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Batian_Nelion_and_pt_Slade_in_the_foreground_Mt_Kenya.JPG/220px-Batian_Nelion_and_pt_Slade_in_the_foreground_Mt_Kenya.JPG" class="rounded align-self-start mr-3" alt="...">
                         <div class="media-body">
                             <p style="font-size:90%;color:#808e95">{{$book->category->Genre}}</p>
@@ -103,7 +103,7 @@
                         </div>
                     </div>
                     @else
-                    <div class="media pt-2">
+                    <div class="media pt-2" style="max-width: 800px;overflow:hidden;">
                         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Batian_Nelion_and_pt_Slade_in_the_foreground_Mt_Kenya.JPG/220px-Batian_Nelion_and_pt_Slade_in_the_foreground_Mt_Kenya.JPG" class="rounded align-self-start mr-3" alt="...">
                         <div class="media-body">
                             <p style="font-size:90%;color:#808e95">{{$book->category->Genre}}</p>
@@ -127,19 +127,19 @@
                 <ul>
             </div>
             <div class="row">
-                <div class="col-10 ml-4" >
+                <div class="col-10 ml-4" style="max-width: 800px;overflow:hidden;">
                     <p style="color:#808e95">technology</p>
                     <h5 >Top-aligned media</h5>
                     <p>Cras sit amet nibh libero, in gravida nulla. </p>
                         
                 </div>
-                <div class="col-10 ml-4" >
+                <div class="col-10 ml-4" style="max-width: 800px;overflow:hidden;">
                     <p style="color:#808e95">technology</p>
                     <h5 >Top-aligned media</h5>
                     <p>Cras sit amet nibh libero, in gravida nulla. </p>
                         
                 </div>
-                <div class="col-10 ml-4" >
+                <div class="col-10 ml-4" style="max-width: 800px;overflow:hidden;">
                     <p style="color:#808e95">technology</p>
                     <h5 >Top-aligned media</h5>
                     <p>Cras sit amet nibh libero, in gravida nulla. </p>

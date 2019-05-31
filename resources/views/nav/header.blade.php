@@ -24,15 +24,14 @@
                         {{ csrf_field() }}
                     </form>
                   </li>
-          
             </ul>        
+            <a href="#" class="dropdown-toggle float-right" data-toggle="dropdown" role="button" aria-expanded="false" style="font-weight: boldposition:relative; ">
+                {{ Auth::user()->name }}
+            </a>
+            <a href="#" class="float-right" data-toggle="dropdown" role="button" aria-expanded="false" style="font-weight: boldposition:relative;">
+                <img class="float-right"   src="/uploads/avatars/{{ Auth::user()->avatar }}" style="width:32px; height:32px; top:10px;  border-radius:50%;">
+            </a>
         @endif
-        <a href="#" class="dropdown-toggle float-right" data-toggle="dropdown" role="button" aria-expanded="false" style="font-weight: boldposition:relative; ">
-            {{ Auth::user()->name }}
-        </a>
-        <a href="#" class="float-right" data-toggle="dropdown" role="button" aria-expanded="false" style="font-weight: boldposition:relative;">
-          <img class="float-right"   src="/uploads/avatars/{{ Auth::user()->avatar }}" style="width:32px; height:32px; top:10px;  border-radius:50%;">
-      </a>
         
     </ul>
 </div> 

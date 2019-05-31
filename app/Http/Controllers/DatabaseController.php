@@ -10,6 +10,7 @@ use App\Is_Comment_On;
 use App\IsCategory;
 use Auth;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Storage; 
 
 class DatabaseController extends Controller
 {
@@ -23,13 +24,21 @@ class DatabaseController extends Controller
     }
 
     public function addBook(Request $request){
+        
 
-        $book = new Books();
+
+            $filenameWithExt = $request->file('cover_image')->getClientOriginalName();
+            $filename = pathinfo( $filenameWithExt,PATHINFO_FILENAME);
+            $extension = $request->file('cover_image')->getClientOriginalExtension();
+            $fileNameToStrore = $filename.'_'.time().'.'.$extension;
+            $path = $request->file('cover_image')->storeAs('public/cover_image',$fileNameToStrore);
+
         if (Auth::check())
         {
+            $book = new Books();
             $book->Title = $request->input('title');
             $book->Content = $request->input('body');
-            $book->TitleCover = '';
+            $book->TitleCover = $fileNameToStrore;
             $book->ViewCount = 0;
             $book->TotalRate = '';
             $book->TotalReview= '';

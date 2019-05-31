@@ -192,10 +192,7 @@ class DatabaseController extends Controller
 
     public function getAllBooksMostView(Request $request){
         $categories = Category::all();
-
         $books = $this->getLastestBookByCategoryId(1,100);
-        return ['categories' => $categories,'books'=>$books];
+        return view('Layout.pageallbook', ['categories' => $categories,'books'=>$books]);
     }
-
-
 }

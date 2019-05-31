@@ -9,7 +9,7 @@
     <div class="col">
     <h3>{{$profile->name}}</h3>
     <p>{{$profile->Carrer}}</p>
-    <p style="text-align:justify;max-height:45px;overflow-y:hidden">{{$profile->BIOs}}</p>
+    <p style="text-align:justify;">{{$profile->BIOs}}</p>
     </div>
 </div>
 <div style="margin-top:2%;">
@@ -24,7 +24,9 @@
             <img class="card-img-top" src="{{asset('img/bali.jpg')}}" width="380" height="160" alt="Card image cap">
             <div class="card-body">
                 <h5>{{$book->Title}}</h5>
+                <div style="max-height:45px;overflow-y:hidden">
                 {!!$book->Content!!}
+                </div>
                 <p style="color:#808e95">yesterday, 23:22</p>
             </div>
         </div>

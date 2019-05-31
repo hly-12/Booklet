@@ -15,9 +15,8 @@
                   <li>
                     <a class="dropdown-item" href="/profile/{{Auth::user()->id}}"><i class="fa fa-btn fa-user"></i>Profile</a>
                     <a class="dropdown-item" href="{{ url('/create') }}"><i class="fa fa-btn fa-book"></i>New Story</a>
-                    <a class="dropdown-item" href="{{route('logout')}}"
-                        onclick="event.preventDefault();
-                              document.getElementById('frm-logout').submit();"><i class="fa fa-btn fa-power-off"></i>
+                    <a class="dropdown-item" href="{{route('logout')}}">
+                               <i class="fa fa-btn fa-power-off"></i>
                         Logout
                         </a>
                     <form class="dropdown-item" action="{{ route('logout') }}" method="POST" style="display: none;">

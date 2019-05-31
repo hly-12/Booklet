@@ -1,24 +1,29 @@
 @extends('layout.apps')
 
 @section('content')
-<div class="shadow p-3 mb-5 bg-white rounded" style="margin-top:5%">
+<div class="card shadow p-3 mb-5 bg-white rounded" style="margin-top:5%">
     <h1>{{$book->Title}}</h1>
     <div class="row user-row">
-     <div class="col-lg-5">
-        <div class="media">
-            <a class="pull-left" href="#">
-            <img class="media-object dp img-circle" src="/uploads/avatars/{{ $book->user->avatar }}" style="width: 60px;height:60px;">
-            </a>
-            <div class="media-body" style="margin-left:20px;">
-                <h5 class="media-heading">{{$book->user->name}}</h5>
-                <p>{{$book->user->Carrer}}</p>
+        <div class="col-lg-12">
+            <div class="media">
+                <a class="pull-left" href="#">
+                <img class="media-object dp img-circle" src="/uploads/avatars/{{ $book->user->avatar }}" style="width: 60px;height:60px;">
+                </a>
+                <div class="media-body" style="margin-left:20px;">
+                    <h5 class="media-heading">{{$book->user->name}}</h5>
+                    <p>{{$book->user->Carrer}}</p>
+                </div>
             </div>
-        </div>
-    </div>   
-    <div>
-        <div style="margin-top:30%">
-            {!!$book->Content!!}
-        </div>
+            <div class="row">
+                <div class="col-12">
+                    {!!$book->Content!!}
+                </div>
+            </div>
+        </div>   
+        <div>
+            <div style="margin-top:30%" class="card-text">
+                
+            </div>
         </div>           
     </div>
 </div>

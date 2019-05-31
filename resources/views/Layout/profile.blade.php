@@ -9,7 +9,7 @@
     <div class="col">
     <h3>{{$profile->name}}</h3>
     <p>{{$profile->Carrer}}</p>
-    <p style="text-align:justify;">{{$profile->BIOs}}</p>
+    <p style="text-align:justify;max-height:45px;overflow-y:hidden">{{$profile->BIOs}}</p>
     </div>
 </div>
 <div style="margin-top:2%;">

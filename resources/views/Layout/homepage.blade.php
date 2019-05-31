@@ -53,7 +53,9 @@
                         <div class="media-body">
                             <p style="font-size:90%;color:#808e95">{{$book->category->Genre}}</p>
                             <h5 class="mt-0">{{$book->Title}}</h5>
-                            <div >{!!$book->Content!!}</div>
+                            <div style="max-height:45px;overflow-y:hidden">
+                                {!!$book->Content!!}
+                            </div>
                         </div>
                     </div>
                     </a>
@@ -65,7 +67,9 @@
                         <div class="media-body">
                             <p style="font-size:90%;color:#808e95">{{$book->category->Genre}}</p>
                             <h5 class="mt-0">{{$book->Title}}</h5>
-                            {!!$book->Content!!}
+                            <div style="max-height:45px;overflow-y:hidden">
+                                {!!$book->Content!!}
+                                </div>
                         </div>
                     </div>
                     </a>
@@ -99,7 +103,9 @@
                         <div class="media-body">
                             <p style="font-size:90%;color:#808e95">{{$book->category->Genre}}</p>
                             <h5 class="mt-0">{{$book->Title}}</h5>
-                            {!!$book->Content!!}
+                            <div style="max-height:45px;overflow-y:hidden">
+                                {!!$book->Content!!}
+                                </div>
                         </div>
                     </div>
                     @else
@@ -108,7 +114,9 @@
                         <div class="media-body">
                             <p style="font-size:90%;color:#808e95">{{$book->category->Genre}}</p>
                             <h5 class="mt-0">{{$book->Title}}</h5>
-                            {!!$book->Content!!}
+                            <div style="max-height:45px;overflow-y:hidden">
+                                {!!$book->Content!!}
+                                </div>
                         </div>
                     </div>
                     @endif

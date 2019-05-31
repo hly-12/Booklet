@@ -136,8 +136,15 @@ class DatabaseController extends Controller
         $categories = Category::all();
         $id_book = $request->id_book;
         
+        $book = Books::find($id_book);
+        $book->ViewCount = $book->ViewCount + 1;
+        $book->save();
+
         $write_books = Books::where('id',$id_book)->first();
         $write_books->user = User::where('id',$write_books->UserID)->first();
+
+
+
         return view('Layout.viewdata',['categories' => $categories,'book'=>$write_books]);
     }
 
@@ -181,4 +188,14 @@ class DatabaseController extends Controller
         // return response()->json($books);
         
     }
+
+
+    public function getAllBooksMostView(Request $request){
+
+
+        $book = $this->getLastestBookByCategoryId($request->id_category,100);
+        return $book;
+    }
+
+
 }

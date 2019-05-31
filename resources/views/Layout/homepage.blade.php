@@ -38,7 +38,7 @@
                         <ul>
                     </div>
                     <div class="col-md-3 ml-auto m-2">
-                        <a href="#"  style="color:#808e95;">More features </a>
+                        <a href="/mostview/{{1}}"  style="color:#808e95;">See More</a>
                     </div>
                     
                     
@@ -86,7 +86,7 @@
                         <ul>
                     </div>
                     <div class="col-md-3 ml-auto m-2">
-                        <a href="#"  style="color:#808e95;">Most Popular</a>
+                        <a href="#"  style="color:#808e95;">See More</a>
                     </div>
                     
                 </div>

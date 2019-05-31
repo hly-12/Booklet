@@ -6,7 +6,7 @@
     <a href="/viewdata/{{$book->id}}" style = "color: inherit;text-decoration: none;min-height: 500px;" class="col-4">
         
             <div class="card card-block shadow" style="height: 100%">
-                <img class="card-img-top" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Batian_Nelion_and_pt_Slade_in_the_foreground_Mt_Kenya.JPG/220px-Batian_Nelion_and_pt_Slade_in_the_foreground_Mt_Kenya.JPG" alt="Card image cap">
+                <img class="card-img-top" src="https://nationalpostcom.files.wordpress.com/2016/05/theinevitable.jpg" alt="Card image cap">
                 <div class="card-body" style="margin:10px">
                     <h5>{{$book->Title}}</h5>
                     <div style="max-height:45px;overflow-y:hidden">
@@ -19,11 +19,6 @@
     </a>
     @endforeach
      
-</div>
-<div class="row justify-content-end">
-    <div class="col-2">
-        <a href="#" class="badge badge-light" style="font-size:20px;color:#808e95">More features </a>
-    </div>
 </div>
 
 <div class="row justify-content-center" style="margin-top: 24px">

@@ -5,7 +5,7 @@
      
         @if (Auth::guest())
           <li class="float-right" style="padding-right:10%;margin-top:35px;padding-left:10px;"><a href="{{route('login')}}" class="btn btn-success" role="button">Log in</a></li>
-          <li class="float-right" style="margin-top:15px;padding-top:1%;"><p style="font-weight: bold ;"><a href="/profile">Become a member</p></a></li>
+          <li class="float-right" style="margin-top:15px;padding-top:1%;"><p style="font-weight: bold ;"><a href="/register">Become a member</p></a></li>
         @else
           <!-- {{-- <li class="float-right" style="padding-right:10%;margin-top:35px;padding-left:10px;"><a href="{{route('logout')}}" class="btn btn-success" role="button">Log out</a><form id="frm-logout" action="{{ route('logout') }}" method="POST" style="display: none;">{{ csrf_field() }}</form></li> --}}
           {{-- <li class="float-right" style="margin-top:15px;padding-top:1%;"><p style="font-weight: bold ;"><a href="/profile">{{ Auth::user()->name }}</p></a></li> --}}

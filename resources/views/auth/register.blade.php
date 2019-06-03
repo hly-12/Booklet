@@ -10,7 +10,7 @@
                     <h4 class="text-uppercase text-bold-400 grey darken-1" style="font-weight: bold;">SignUp</h4>
                 </div>
                 <div class="card-body">
-                    <form method="POST" action="{{ route('register') }}">
+                    <form method="POST" action="{{ route('register') }} " enctype=”multipart/form-data>
                         @csrf
 
                         <div class="form-group">

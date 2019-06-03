@@ -25,9 +25,9 @@ Route::get('/viewdata/{id_book}', 'DatabaseController@getBookPage');
 
 Route::get('/create', 'DatabaseController@getEditorPage');
 
-Route::get('profiles','UserController@profile');
+Route::get('profiles','UserController@edit');
 Route::get('profiles','UserController@update_avatar');
-Route::POST('profiles','UserController@update_avatar');
+Route::POST('profiles','UserController@edit');
 
 Auth::routes();
 Route::POST('/create', 'DatabaseController@addBook');

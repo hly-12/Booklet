@@ -4,12 +4,19 @@
 <div class="bodyshape">
 <div class="row" style="margin-top:5%;">
     <div class="col-auto">
-    <img style="margin-right:2%;" src="/uploads/avatars/{{ Auth::user()->avatar }}" max-width="400" max-height="400" align="left"> 
+        <div class="row">
+            <img style="margin-right:2%;" src="/uploads/avatars/{{ Auth::user()->avatar }}" max-width="400" max-height="400" align="left"> 
+        </div>
+        <div class="row">
+            <a class="btn btn-primary mt-2" href="../profiles" role="button">Edit</a>
+        </div>
     </div >
+    
     <div class="col">
-    <h3>{{$profile->name}}</h3>
-    <p>{{$profile->Carrer}}</p>
-    <p style="text-align:justify;">{{$profile->BIOs}}</p>
+        <h3>{{$profile->name}}</h3>
+        
+        <p>{{$profile->Carrer}}</p>
+        <p style="text-align:justify;">{{$profile->BIOs}}</p>
     </div>
 </div>
 <div style="margin-top:2%;">

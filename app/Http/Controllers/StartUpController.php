@@ -792,5 +792,62 @@ class StartUpController extends Controller
         $is_category->BookID = Books::max('id');
         $is_category->save();
 
+
+        $user = new User();
+
+        $user->name = "Dummy1";
+        $user->email = "Dummy1@dumb.com";
+        $user->password = Hash::make("123123123");
+        $user->Carrer = "Dummy1Job";
+        $user->BIOs = "So Dumb";
+        $user->BIOs = "default.jpg";
+
+        $user->save();
+
+
+        $user = new User();
+
+        $user->name = "Dummy2";
+        $user->email = "Dummy2@dumb.com";
+        $user->password = Hash::make("123123123");
+        $user->Carrer = "Dummy2Job";
+        $user->BIOs = "So Dumb";
+        $user->BIOs = "default.jpg";
+
+        $user->save();
+
+        $user = new User();
+
+        $user->name = "Dummy3";
+        $user->email = "Dummy3@dumb.com";
+        $user->password = Hash::make("123123123");
+        $user->Carrer = "Dummy3Job";
+        $user->BIOs = "So Dumb";
+        $user->BIOs = "default.jpg";
+
+        $user->save();
+
+        $user = new User();
+
+        $user->name = "Dummy4";
+        $user->email = "Dummy4@dumb.com";
+        $user->password = Hash::make("123123123");
+        $user->Carrer = "Dummy4Job";
+        $user->BIOs = "So Dumb";
+        $user->BIOs = "default.jpg";
+
+        $user->save();
+
+        $user = new User();
+
+        $user->name = "Dummy5";
+        $user->email = "Dummy5@dumb.com";
+        $user->password = Hash::make("123123123");
+        $user->Carrer = "Dummy5Job";
+        $user->BIOs = "So Dumb";
+        $user->BIOs = "default.jpg";
+
+        $user->save();
+
     }
 }

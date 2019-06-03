@@ -6,7 +6,7 @@
     <a href="/viewdata/{{$book->id}}" style = "color: inherit;text-decoration: none;min-height: 500px;" class="col-4">
         
             <div class="card card-block shadow" style="height: 100%">
-                <img class="card-img-top" src="https://nationalpostcom.files.wordpress.com/2016/05/theinevitable.jpg" alt="Card image cap">
+                <img class="card-img-top" src="/uploads/avatars/{{$book->TitleCover}}" alt="Card image cap">
                 <div class="card-body" style="margin:10px">
                     <h5>{{$book->Title}}</h5>
                     <div style="max-height:45px;overflow-y:hidden">
@@ -25,12 +25,12 @@
     <div class="col-8 shadow mb-5">
         <div>
             {{-- Member block --}}
-            <div style="padding:8%" >
+            <div style="padding:5%" >
                 <div class="row border border-secondary border-top-0 border-right-0 border-left-0">
-                    <div class="col-md-4 "style="font-size:1.5rem" >
+                    <div class="col-md-4"style="font-size:1.5rem" >
                         <ul>
                             <li>Most View</li>
-                        <ul>
+                        </ul>
                     </div>
                     <div class="col-md-3 ml-auto m-2">
                         <a href="/mostview/{{1}}"  style="color:#808e95;">See More</a>
@@ -44,7 +44,7 @@
                     <a href="/viewdata/{{$book->id}}" style = "color: inherit;text-decoration: none;">
 
                     <div class="media pt-4" style="max-width: 800px;overflow:hidden;">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Batian_Nelion_and_pt_Slade_in_the_foreground_Mt_Kenya.JPG/220px-Batian_Nelion_and_pt_Slade_in_the_foreground_Mt_Kenya.JPG" class="rounded align-self-start mr-3" alt="...">
+                        <img src="/uploads/avatars/{{$book->TitleCover}}" class="rounded align-self-start mr-3" alt="...">
                         <div class="media-body">
                             <p style="font-size:90%;color:#808e95">{{$book->category->Genre}}</p>
                             <h5 class="mt-0">{{$book->Title}}</h5>
@@ -58,7 +58,7 @@
                     <a href="/viewdata/{{$book->id}}" style = "color: inherit;text-decoration: none;">
 
                     <div class="media pt-4" style="max-width: 800px;overflow:hidden;">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Batian_Nelion_and_pt_Slade_in_the_foreground_Mt_Kenya.JPG/220px-Batian_Nelion_and_pt_Slade_in_the_foreground_Mt_Kenya.JPG" class="rounded align-self-start mr-3" alt="...">
+                        <img src="/uploads/avatars/{{$book->TitleCover}}" class="rounded align-self-start mr-3" alt="...">
                         <div class="media-body">
                             <p style="font-size:90%;color:#808e95">{{$book->category->Genre}}</p>
                             <h5 class="mt-0">{{$book->Title}}</h5>
@@ -94,7 +94,7 @@
 
                     @if($loop->first)
                     <div class="media pt-4" style="max-width: 800px;overflow:hidden;">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Batian_Nelion_and_pt_Slade_in_the_foreground_Mt_Kenya.JPG/220px-Batian_Nelion_and_pt_Slade_in_the_foreground_Mt_Kenya.JPG" class="rounded align-self-start mr-3" alt="...">
+                        <img src="/uploads/avatars/{{$book->TitleCover}}" class="rounded align-self-start mr-3" alt="...">
                         <div class="media-body">
                             <p style="font-size:90%;color:#808e95">{{$book->category->Genre}}</p>
                             <h5 class="mt-0">{{$book->Title}}</h5>
@@ -105,7 +105,7 @@
                     </div>
                     @else
                     <div class="media pt-2" style="max-width: 800px;overflow:hidden;">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Batian_Nelion_and_pt_Slade_in_the_foreground_Mt_Kenya.JPG/220px-Batian_Nelion_and_pt_Slade_in_the_foreground_Mt_Kenya.JPG" class="rounded align-self-start mr-3" alt="...">
+                        <img src="/uploads/avatars/{{$book->TitleCover}}" class="rounded align-self-start mr-3" alt="...">
                         <div class="media-body">
                             <p style="font-size:90%;color:#808e95">{{$book->category->Genre}}</p>
                             <h5 class="mt-0">{{$book->Title}}</h5>

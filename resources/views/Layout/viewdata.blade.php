@@ -15,7 +15,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-12" style="font-family: Lucida Console, Courier, monospace;font-size:medium;margin-left:2%;text-align: justify;">
+                <div class="col-12" style="font-family: Lucida Console, Courier, monospace;font-size:medium;margin:1%;padding-right:2%;text-align: justify;">
                     {!!$book->Content!!}
                 </div>
             </div>

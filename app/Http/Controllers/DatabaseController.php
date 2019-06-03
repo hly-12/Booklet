@@ -11,16 +11,14 @@ use App\IsCategory;
 use Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage; 
+use Illuminate\Support\Facades\Hash;
+
 
 class DatabaseController extends Controller
 {
     //
     public function test(Request $request){
         
-        $id_book = 1;
-        
-        $write_books = Books::where('id',$id_book)->first();
-        return $write_books;
     }
 
     public function addBook(Request $request){
@@ -144,6 +142,7 @@ class DatabaseController extends Controller
         $write_books->user = User::where('id',$write_books->UserID)->first();
 
 
+        
 
         return view('Layout.viewdata',['categories' => $categories,'book'=>$write_books]);
     }

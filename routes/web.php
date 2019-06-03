@@ -18,7 +18,8 @@
 Route::get('/','DatabaseController@getHomepage');
 Route::post('/','DatabaseController@getHomepage');
 Route::get('/mostview/{id_category}','DatabaseController@getAllBooksMostView');
-Route::get('/test','StartUpController@seedData');
+Route::get('/test','DatabaseController@test');
+// Route::get('/test','StartUpController@seedData');
 
 Route::get('/profile/{id_profile}','DatabaseController@getProfilePage');
 

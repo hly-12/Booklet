@@ -17,7 +17,7 @@ class CreateBooksTable extends Migration
             $table->bigIncrements('id');
             $table->string('Title');
             $table->string('TitleCover');
-            $table->string('Content');
+            $table->text('Content');
             $table->date('DateOfPublish');
             $table->integer('ViewCount');
             $table->string('TotalRate');

@@ -7,7 +7,7 @@
         <div class="col-lg-12">
             <div class="media">
                 <a class="pull-left" href="#">
-                <img class="media-object dp img-circle" src="/uploads/avatars/{{ $book->user->avatar }}" style="width: 60px;height:60px;">
+                <img class="media-object dp img-circle" src="/uploads/avatars/{{ $book->user->avatar }}" style="width: 60px;height:60px;margin-bottom:20px;">
                 </a>
                 <div class="media-body" style="margin-left:20px;">
                     <h5 class="media-heading">{{$book->user->name}}</h5>
@@ -15,7 +15,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-12" >
+                <div class="col-12" style="font-family: Lucida Console, Courier, monospace;font-size:medium;margin:1%;padding-right:2%;text-align: justify;">
                     {!!$book->Content!!}
                 </div>
             </div>

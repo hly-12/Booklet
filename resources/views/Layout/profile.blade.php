@@ -28,10 +28,12 @@
 @foreach($write_books as $book)
 <a href="/viewdata/{{$book->id}}" style = "color: inherit;text-decoration: none;margin:1%;width:355px;">
         <div class="card card-block shadow" style="height: 100%;margin-bottom:3%;">
-            <img class="card-img-top" src="{{asset('img/bali.jpg')}}" width="380" height="160" alt="Card image cap">
-            <div class="card-body">
+            <img class="card-img-top" src="/uploads/avatars/{{$book->TitleCover}}" width="380" height="160" alt="Card image cap">
+            <div class="card-body"> 
                 <h5>{{$book->Title}}</h5>
+                <div style="max-height:45px;overflow-y:hidden">
                 {!!$book->Content!!}
+                </div>
                 <p style="color:#808e95">yesterday, 23:22</p>
             </div>
         </div>

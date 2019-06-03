@@ -17,11 +17,14 @@
 
 Route::get('/','DatabaseController@getHomepage');
 Route::post('/','DatabaseController@getHomepage');
+Route::get('/mostview/{id_category}','DatabaseController@getAllBooksMostView');
 Route::get('/test','DatabaseController@test');
+// Route::get('/test','StartUpController@seedData');
 
 Route::get('/profile/{id_profile}','DatabaseController@getProfilePage');
 
 Route::get('/viewdata/{id_book}', 'DatabaseController@getBookPage');
+Route::get('/viewalldata/{id_book}', 'DatabaseController@getAllBooksMostView');
 
 Route::get('/create', 'DatabaseController@getEditorPage');
 
@@ -31,6 +34,7 @@ Route::POST('profiles','UserController@edit');
 
 Auth::routes();
 Route::POST('/create', 'DatabaseController@addBook');
+
 // Route::get('/create', 'DatabaseController@addBook');
 // Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/logout', function(){

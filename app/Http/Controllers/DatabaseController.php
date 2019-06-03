@@ -11,16 +11,14 @@ use App\IsCategory;
 use Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage; 
+use Illuminate\Support\Facades\Hash;
+
 
 class DatabaseController extends Controller
 {
     //
     public function test(Request $request){
         
-        $id_book = 1;
-        
-        $write_books = Books::where('id',$id_book)->first();
-        return $write_books;
     }
 
     public function addBook(Request $request){
@@ -136,8 +134,16 @@ class DatabaseController extends Controller
         $categories = Category::all();
         $id_book = $request->id_book;
         
+        $book = Books::find($id_book);
+        $book->ViewCount = $book->ViewCount + 1;
+        $book->save();
+
         $write_books = Books::where('id',$id_book)->first();
         $write_books->user = User::where('id',$write_books->UserID)->first();
+
+
+        
+
         return view('Layout.viewdata',['categories' => $categories,'book'=>$write_books]);
     }
 
@@ -180,5 +186,12 @@ class DatabaseController extends Controller
         return view('Layout.homepage',['categories' => $categories,'latest_books'=>$latest_books,'most_view_books'=>$most_view_books,'popular_books'=>$popular_books]);
         // return response()->json($books);
         
+    }
+
+
+    public function getAllBooksMostView(Request $request){
+        $categories = Category::all();
+        $books = $this->getLastestBookByCategoryId(1,100);
+        return view('Layout.pageallbook', ['categories' => $categories,'books'=>$books]);
     }
 }
